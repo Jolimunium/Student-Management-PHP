@@ -14,3 +14,13 @@
 - PHP (สำหรับ Back-end)
 - MySQL (สำหรับฐานข้อมูล)
 - Bootstrap 5 (ออกแบบ UI)
+
+สร้าง DB
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL,
+  `names` varchar(255) NOT NULL,
+  `gender` enum('Male','Female') NOT NULL,
+  `class_year` int(11) NOT NULL,
+  `gpa` decimal(3,2) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
