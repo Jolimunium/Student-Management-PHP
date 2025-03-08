@@ -98,15 +98,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     
         if (!empty($gpa)) {
-            if($gpa == '3-4'){
+            if($gpa == '3'){
                 $conditions[] = "gpa >= ? AND gpa < ?";
                 $params[] = (float)$gpa;
                 $params[] = (float)4;
-            }else if($gpa == '2-3'){
+            }else if($gpa == '2'){
                 $conditions[] = "gpa >= ? AND gpa < ?";
                 $params[] = (float)$gpa;
                 $params[] = (float)3;
-            }else if($gpa == '1-2'){
+            }else if($gpa == '1'){
                 $conditions[] = "gpa >= ? AND gpa < ?";
                 $params[] = (float)$gpa;
                 $params[] = (float)2;
@@ -215,10 +215,9 @@ if(count($params)>0){
                     <select name="gpa" class="form-control">
                         <option value="">GPA</option>
                         <option value="4" <?= isset($gpa) && $gpa == '4' ? 'selected' : '' ?>>GPA = 4</option>
-                        <!-- &lt; คือตัว <4    -->
-                        <option value="3-4" <?= isset($gpa) && $gpa == '3' ? 'selected' : '' ?>>GPA >= 3 And GPA &lt;4 </option>
-                        <option value="2-3" <?= isset($gpa) && $gpa == '2' ? 'selected' : '' ?>>GPA >= 2 And GPA &lt;3 </option>
-                        <option value="1-2" <?= isset($gpa) && $gpa == '1' ? 'selected' : '' ?>>GPA >= 1 And GPA &lt;2 </option>
+                        <option value="3" <?= isset($gpa) && $gpa == '3' ? 'selected' : '' ?>>GPA >= 3 And GPA &lt;4 </option>
+                        <option value="2" <?= isset($gpa) && $gpa == '2' ? 'selected' : '' ?>>GPA >= 2 And GPA &lt;3 </option>
+                        <option value="1" <?= isset($gpa) && $gpa == '1' ? 'selected' : '' ?>>GPA >= 1 And GPA &lt;2 </option>
                     </select>
                 </div>
 
